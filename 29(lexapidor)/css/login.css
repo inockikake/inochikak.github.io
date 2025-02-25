@@ -1,0 +1,217 @@
+@import '/css/reset.css';
+@import '/css/header.css';
+@import '/css/main.css';
+.main {
+  display: flex;
+  justify-content: center;
+  margin: clamp(30px, 8vw, 104px) 0 clamp(50px, 10vw, 160px) 0;
+}
+
+.main__inner {
+  display: flex;
+  flex-direction: column;
+  width: clamp(300px, 30vw, 480px);
+}
+.main__inner .main__titles {
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  gap: 27px;
+  margin-bottom: 30px;
+}
+.main__inner .main__titles h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  line-height: 42px;
+  color: #9CA3AF;
+}
+.main__inner .main__titles h1.active {
+  color: #000;
+}
+.main__inner .main__login-block .main__login__subtitle {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  margin-bottom: 15px;
+}
+.main__inner .main__login-block .main__login__name {
+  margin-bottom: 16px;
+}
+.main__inner .main__login-block .main__login__name p {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 6px;
+}
+.main__inner .main__login-block .main__login__name input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+}
+.main__inner .main__login-block .main__login__password {
+  margin-bottom: 16px;
+}
+.main__inner .main__login-block .main__login__password p {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 6px;
+}
+.main__inner .main__login-block .main__login__password input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+}
+.main__inner .main__login-block .main__login__detail {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 22px;
+}
+.main__inner .main__login-block .main__login__detail a {
+  color: rgb(27, 184, 241);
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember {
+  display: flex;
+  align-items: center;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.32px;
+  display: flex;
+  align-items: center;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember input + label {
+  align-items: center;
+  user-select: none;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember input + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #E5E7EB;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.main__inner .main__login-block .main__login__detail .main__login__detail__remember input:checked + label::before {
+  background-color: rgb(27, 184, 241);
+  border: 1px solid rgb(27, 184, 241);
+  background-image: url(/img/icons/check-mark.svg);
+  transition: all 0.2s;
+}
+.main__inner .main__login-block .main__login__btn {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(27, 184, 241);
+  color: white;
+  line-height: 42px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+}
+
+.main__register-block {
+  display: none;
+}
+
+.main__register__subtitle {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 16px;
+}
+
+.main__register__name {
+  margin-bottom: 16px;
+}
+.main__register__name p {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 6px;
+}
+.main__register__name input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+}
+
+.main__register__email {
+  margin-bottom: 16px;
+}
+.main__register__email p {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 6px;
+}
+.main__register__email input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+}
+
+.main__register__password {
+  margin-bottom: 16px;
+}
+.main__register__password p {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 6px;
+}
+.main__register__password input {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+}
+
+.main__register__info {
+  font-size: 13px;
+  letter-spacing: -0.32px;
+  line-height: 19.5px;
+  margin-bottom: 35px;
+}
+.main__register__info span {
+  color: rgb(27, 184, 241);
+  text-decoration: underline;
+}
+
+.main__register__btn {
+  width: 100%;
+  font-weight: 700;
+  background-color: rgb(27, 184, 241);
+  color: white;
+  font-size: 14px;
+  line-height: 42px;
+  letter-spacing: -0.28px;
+  border-radius: 8px;
+}

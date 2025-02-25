@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlatá Rybka</title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <header class="header">
+        <!-- настройки в самом вверху -->
+        <section class="top-settings">
+            <div class="container">
+                <div class="top-settings__inner">
+                    <!-- текст часов работы -->
+                    <p class="top-settings__work-time">
+                        We deliver to you every day from <span>7:00 to 23:00</span>
+                    </p>
+                    <!-- настройки языка и валюты -->
+                    <div class="top-settings__block">
+                        <select name="language" class="top-settings__language-settings">
+                            <option value="en">English</option>
+                            <option value="ua">Ukrainian</option>
+                        </select>
+                        <select name="currency" class="top-currency__currency-settings">
+                            <option value="usd">USD</option>
+                            <option value="uan">UAN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="main-header">
+            <div class="container">
+                <div class="main-header__inner">
+                    <!-- лого -->
+                    <a href="/html/main.html" class="main-header__logo">
+                        Zlatá Rybka
+                    </a>
+                    <!-- места доставки -->
+                    <div class="main-header__deliver-places">
+                        <img src="/img/icons/dot.svg">
+                        <p class="main-header__deliver-places__text">
+                            Deliver to <br> <span>all</span>
+                        </p>
+                    </div>
+                    <!-- поиск -->
+                    <form class="main-header__search">
+                    </form>
+                    <!-- аккаунт -->
+                    <div class="main-header__account">
+                        <img src="/img/icons/account.svg">
+                        <a href="/html/login.html">
+                            Sign In <br> <span>Account</span>
+                        </a>
+                    </div>
+                    <!-- вишлист -->
+                    <a href="/html/wishlist.html" class="main-header__wishlist">
+                        <span class="main-header__wishlist__count">0</span>
+                        <img src="/img/icons/heart.svg">
+                    </a>
+                    <!-- корзина -->
+                    <a href="/html/cart.html" class="main-header__cart">
+                        <span class="main-header__cart__count">0</span>
+                        <img src="/img/icons/cart.svg">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- адаптивный (от 800px) поиск -->
+        <div class="main-header-adaptive">
+            <div class="container">
+                <div class="main-header-adaptive__inner">
+                </div>
+                <ul id="burger-menu" aria-hidden="true" class="main-header-adaptive__burger-menu">
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Home</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Shop</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Fruits & Vegetables</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Beverages</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Blog</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- навигация -->
+        <nav class="navigation">
+            <div class="container">
+                <div class="navigation__inner">
+                    <ul class="navigation__menu">
+                        <li class="navigation__item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Shop</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Fruits & Vegetables</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Beverages</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- страница -->
+
+    <main class="main">
+        <section class="main__product">
+            <div class="container">
+                <div class="main__product__inner">
+                    <div class="main__product__img">
+                        <span>75%</span>
+                        <img class="main__product__product-img" src="/img/products/1.jpg">
+                        <button>
+                            <img src="/img/icons/raise.svg">
+                        </button>
+                    </div>
+                    <div class="main__product__info">
+                        <h1 class="main__product__name">
+                            Marketside Fresh Organic Bananas, <br>
+                            Bunch
+                        </h1>
+                        <div class="main__product__reviews">
+                            <img src="/img/icons/star/star45.svg">
+                            <p>4.50</p>
+                        </div>
+                        <p class="main__product__description">Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti
+                            sociosqu ad litora torquent Vivamus adipiscing nisl ut dolor dignissim semper.
+                        </p>
+                        <div class="main__product__price">260Kč<span>360Kč</span></div>
+                        <button class="main__product__order-btn">
+                            <a href="#">Order on Viber</a>
+                        </button>
+                        <div class="main__product__footer">
+                            <div class="main__product__footer__count-input">
+                                <span class="minus">-</span>
+                                <input id="main__product__footer__count-input" max="10" min="1" placeholder="1" type="number">
+                                <span class="plus">+</span>
+                            </div>
+                            <button class="main__product__footer__cart-btn">
+                                <img src="/img/icons/bag.svg">
+                                Add to cart</button>
+                            <button class="main__product__footer__buy-btn">
+                                <img src="/img/icons/bag.svg">
+                                Buy now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main__product-insights">
+            <div class="container">
+                <div class="main__product-insights__inner">
+                    <div class="main__product-insights__nav">
+                        <h1 class="main__product-insights__nav__description">Description</h1>
+                    </div>
+                    <div class="main__product-insights__block">
+                        Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce
+                        fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu
+                        accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor. <br> 
+                        <br>
+                        Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet,
+                        maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut
+                        arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed
+                        egestas purus commodo vel.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- подвальчик -->
+
+       <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <!-- блок с контактами -->
+                <div class="footer__contact">
+                    <h1 class="footer__contact__title">Do you need help?</h1>
+                    <p class="footer__contact__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    
+                    <!-- блок с номером -->
+                    
+                    <div class="footer__contact__number">
+                        <img src="/img/icons/number.svg">
+                        <div>
+                            <p>Monday-Friday: 08am-9pm</p>
+                            <h1>+420 775 076 299</h1>
+                        </div>
+                    </div>
+
+                    <!-- блок с емейлом -->
+
+                    <div class="footer__contact__email">
+                        <img src="/img/icons/email.svg">
+                        <div>
+                            <p>Need help with your order?</p>
+                            <h1>info@example.com</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- меню с ссылками в подвале -->
+
+                <ul class="footer__menu">
+                    <h1>Menu</h1>
+                    <li class="footer__item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Shop</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Fruits & Vegetables</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Beverages</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- гугл мапс -->
+
+                <div class="footer__maps">
+                    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162528.86582895945!2d13.297644925069529!3d50.468782936735266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a21a552116207%3A0x55061a51b17d6cdb!2sMcDonald&#39;s!5e0!3m2!1sru!2scz!4v1737313460732!5m2!1sru!2scz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- блок с местами доставки и социальные сети -->
+
+                <div class="footer__block">
+                    <div class="footer__delivery">
+                        <img src="/img/icons/dot.svg">
+                        <p class="main-header__deliver-places__text">
+                            Deliver to <br> <span>all</span>
+                        </p>
+                    </div>
+
+                    <div class="footer__social-media">
+                        <p>Our social media</p>
+                       <div>
+                        <a href="#">
+                            <img src="/img/icons/social-media/facebook.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/img/icons/social-media/facebook.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/img/icons/social-media/facebook.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/img/icons/social-media/facebook.svg" alt="">
+                        </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/header.js"></script>
+    <script>
+        const INPUT_MINUS_BTN = document.querySelector('.minus');
+        const INPUT_PLUS_BTN = document.querySelector('.plus');
+
+        INPUT_PLUS_BTN.addEventListener("click", function(){
+            this.previousElementSibling.stepUp();
+        });
+        INPUT_MINUS_BTN.addEventListener("click", function(){
+            this.nextElementSibling.stepDown();
+        });
+    </script>
+</body>
+</html>

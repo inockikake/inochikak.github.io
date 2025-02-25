@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlatá Rybka</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <header class="header">
+        <!-- настройки в самом вверху -->
+        <section class="top-settings">
+            <div class="container">
+                <div class="top-settings__inner">
+                    <!-- текст часов работы -->
+                    <p class="top-settings__work-time">
+                        We deliver to you every day from <span>7:00 to 23:00</span>
+                    </p>
+                    <!-- настройки языка и валюты -->
+                    <div class="top-settings__block">
+                        <select name="language" class="top-settings__language-settings">
+                            <option value="en">English</option>
+                            <option value="ua">Ukrainian</option>
+                        </select>
+                        <select name="currency" class="top-currency__currency-settings">
+                            <option value="usd">USD</option>
+                            <option value="uan">UAN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="main-header">
+            <div class="container">
+                <div class="main-header__inner">
+                    <!-- лого -->
+                    <a href="/html/main.html" class="main-header__logo">
+                        Zlatá Rybka
+                    </a>
+                    <!-- места доставки -->
+                    <div class="main-header__deliver-places">
+                        <img src="/img/icons/dot.svg">
+                        <p class="main-header__deliver-places__text">
+                            Deliver to <br> <span>all</span>
+                        </p>
+                    </div>
+                    <!-- поиск -->
+                    <form class="main-header__search">
+                    </form>
+                    <!-- аккаунт -->
+                    <div class="main-header__account">
+                        <img src="/img/icons/account.svg">
+                        <a href="/html/login.html">
+                            Sign In <br> <span>Account</span>
+                        </a>
+                    </div>
+                    <!-- вишлист -->
+                    <a href="/html/wishlist.html" class="main-header__wishlist">
+                        <span class="main-header__wishlist__count">0</span>
+                        <img src="/img/icons/heart.svg">
+                    </a>
+                    <!-- корзина -->
+                    <a href="/html/cart.html" class="main-header__cart">
+                        <span class="main-header__cart__count">0</span>
+                        <img src="/img/icons/cart.svg">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- адаптивный (от 800px) поиск -->
+        <div class="main-header-adaptive">
+            <div class="container">
+                <div class="main-header-adaptive__inner">
+                </div>
+                <ul id="burger-menu" aria-hidden="true" class="main-header-adaptive__burger-menu">
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Home</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Shop</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Fruits & Vegetables</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Beverages</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Blog</a>
+                    </li>
+
+                    <li class="main-header-adaptive__burger-item">
+                        <a href="#" class="main-header-adaptive__burger-link" tabindex="-1">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- навигация -->
+        <nav class="navigation">
+            <div class="container">
+                <div class="navigation__inner">
+                    <ul class="navigation__menu">
+                        <li class="navigation__item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Shop</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Fruits & Vegetables</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Beverages</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__picture">
+                <h1>Choose photo:</h1>
+                <input type="file">
+            </div>
+            <div class="main__name">
+                <h1>Write product's name:</h1>
+                <input type="text">
+            </div>
+            <div class="main__description">
+                <h1>Write descriprion:</h1>
+                <input type="text">
+            </div>
+            <div class="main__price">
+                <div>
+                    <h1>Write price:</h1>
+                    <input type="number">
+                </div>
+                <div>
+                    <h1>Write price with sale(option):</h1>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="main__details">
+                <div class="main__details__sale">
+                    <label for="sale">Product has sale?</label>
+                    <input id="sale" type="checkbox">
+                </div>
+                <div class="main__details__status">
+                    <label for="status">Is product in stock?</label>
+                    <input id="status" type="checkbox">
+                </div>
+            </div>
+            <button class="main__btn">Add product</button>
+        </div>
+    </main>
+
+    <script type="module" src="/js/header.js"></script>
+</body>
+</html>

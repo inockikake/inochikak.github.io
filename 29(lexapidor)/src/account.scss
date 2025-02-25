@@ -1,0 +1,438 @@
+@import '/css/reset.css';
+@import '/css/header.css';
+@import '/css/main.css';
+
+$font-family: 'Inter';
+$color-grey: #6B7280;
+$color-grey-order: #9CA3AF;
+$border-color: #E5E7EB;
+$letter-spacing: -0.32px;
+$warning-color: #DC2626;
+$black-color: #000;
+$white-color: #FFFF;
+$main-color: rgb(27, 184, 241);
+
+.main__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.main__account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: $letter-spacing;
+        color: $color-grey-order;
+
+        span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            color: $black-color;
+        }
+    }
+}
+.main__block {
+    display: flex;
+    gap: 40px;
+
+    .main__content__account-details {
+        display: block;
+        &.show {
+            display: block;
+        }
+    }
+
+
+    .main__content__orders {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+
+    .main__content__adresses {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+}
+
+.main__nav__menu {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    width: clamp(150px, 15vw, 300px);
+
+    .main__nav__item {
+        padding: 15px 13px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: $letter-spacing;
+        border-bottom: 1px solid $border-color;
+
+        a {
+            color: $black-color;
+        }
+
+        &:last-child {
+            border: none;
+        }
+
+        &:hover {
+            transition: all 0.3s ease;
+            background-color: rgba(246, 246, 246, 0.493);
+        }
+    }
+}
+
+
+.main__content__account-details {
+    width: clamp(330px, 57vw, 1018px);
+}
+
+@media (max-width: 555px) {
+    .main__block {
+        flex-direction: column;
+        width: 100vw;
+
+        .main__nav__menu {
+            width: 91%;
+        }
+
+        .main__content__account-details {
+            width: 91%;
+        }
+    }
+}
+
+.main__content__account-details__title {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 10px;
+}
+.main__content__account-details__first-name {
+    p {
+        font-size: 14px;
+        letter-spacing: $letter-spacing;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+    input {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 19px;
+        padding-left: 10px;
+    }
+}
+.main__content__account-details__last-name {
+    p {
+        font-size: 14px;
+        letter-spacing: $letter-spacing;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+    input {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 19px;
+        padding-left: 10px;
+    }
+}
+.main__content__account-details__number {
+    p {
+        font-size: 14px;
+        letter-spacing: $letter-spacing;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+    input {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 19px;
+        padding-left: 10px;
+    }
+}
+.main__content__account-details__email {
+    p {
+        font-size: 14px;
+        letter-spacing: $letter-spacing;
+        line-height: 21px;
+        margin-bottom: 8px;
+    }
+    input {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 19px;
+        padding-left: 10px;
+    }
+}
+.main__content__account-details__btn {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+}
+
+// orders =========================================================
+
+.main__content__orders {
+    width: clamp(330px, 57vw, 1018px);
+}
+
+@media (max-width: 555px) {
+    .main__content__orders  {
+        width: 91%;
+    }
+}
+
+.main__content__orders__active-orders-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 10px;
+}
+.main__content__orders__active-orders {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(235, 235, 235, 0.324);
+    margin-bottom: 50px;
+}
+.main__content__orders__active-orders__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    padding: 15px 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+        }
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h1 {
+            max-width: 140px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        img {
+            width: clamp(80px, 10vw, 100px);
+            height: clamp(80px, 10vw, 100px);
+            border-radius: 10px;
+        }
+    }
+    .main__content__orders__history__item__price {
+        color: $color-grey;
+    }
+    .main__content__orders__history__item__code {
+        color: $main-color;
+        text-decoration: underline;
+    }
+}
+.main__content__orders__history {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(235, 235, 235, 0.324);
+
+    .main__content__orders__history__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+        padding: 15px 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            h1 {
+                max-width: 140px;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            img {
+                width: clamp(80px, 10vw, 100px);
+                height: clamp(80px, 10vw, 100px);
+                border-radius: 10px;
+            }
+        }
+        .main__content__orders__history__item__price {
+            color: $color-grey;
+        }
+        .main__content__orders__history__item__code {
+            color: $main-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.main__content__orders__history-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 10px;
+}
+
+// addresses ==================================================
+
+.main__content__adresses {
+    width: clamp(330px, 57vw, 1018px);
+}
+
+@media (max-width: 555px) {
+    .main__content__adresses  {
+        width: 91%;
+    }
+}
+
+.main__content__adresses__block {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main__content__adresses__item {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    align-items: center;
+    padding: 10px clamp(10px, 1vw, 20px);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgb($main-color, 0.1);
+
+    div {
+        display: flex;
+        gap: clamp(7px, 1vw, 15px);
+        svg {
+            background-color: $main-color;
+            width: clamp(20px, 3vw, 40px);
+            height: clamp(20px, 3vw, 40px);
+            padding: clamp(4px, 1vw, 8px);
+            border-radius: 50%;
+        }
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            .main__content__adresses__item__name {
+                font-size: clamp(14px, 1vw, 18px);
+                font-weight: 500;
+                margin-bottom: 3px;
+            }
+            .main__content__adresses__item__address {
+                margin-bottom: 3px;
+                font-size: clamp(14px, 1vw, 16px);
+            }
+            .main__content__adresses__item__code {
+                font-size: clamp(12px, 1vw, 14px);
+            }
+        }
+    }
+
+    button {
+        justify-self: flex-end;
+        font-size: clamp(20px, 2vw, 30px);
+        transform: rotate(45deg);
+    }
+}
+
+.main__content__adresses__btn {
+    margin-top: 30px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background-color: $main-color;
+    color: $white-color;
+    font-weight: 500;
+}
+
+// блок добавления адресса
+
+.add-new-address-block {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    top: calc(50% - 496px / 2);
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgb($main-color, 0.2);
+    
+    .add-new-address-block__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .add-new-address-block__title {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: $letter-spacing;
+            margin-bottom: 15px;
+        }
+        .add-new-address-block__close-btn {
+            font-weight: 500;
+            font-size: 30px;
+            transform: rotate(45deg);
+        }
+    }
+
+    div {
+        input {
+            border: 1px solid $border-color;
+            width: 100%;
+            margin: 10px 0;
+            height: 44px;
+            padding-left: 10px;
+            border-radius: 4px;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                appearance: none;
+                margin: 0;
+            }
+        }
+    }
+
+    .add-new-address-block__address-details {
+        display: flex;
+        gap: 10px;
+    }
+}
