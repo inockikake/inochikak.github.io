@@ -1,0 +1,1 @@
+# inochikak.github.io
